@@ -1,0 +1,390 @@
+{
+  "id": "75821b3c-73a0-46d1-9c8a-5e6480f0f600",
+  "version": "2.0",
+  "name": "sinasefe",
+  "url": "https://ibpj.sicredi.com.br",
+  "tests": [{
+    "id": "67592be2-b408-4078-8494-fd4664657a41",
+    "name": "gerar boleto",
+    "commands": [{
+      "id": "c15688d5-7053-41db-8cfb-28ac7184e533",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return [];",
+      "targets": [],
+      "value": "pessoas"
+    }, {
+      "id": "78dbd2b5-4b8c-4bbe-9332-14de15d774d2",
+      "comment": "",
+      "command": "forEach",
+      "target": "pessoas",
+      "targets": [],
+      "value": "iterator"
+    }, {
+      "id": "86ff7f4b-8173-4f5d-a9b9-3e215010e391",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${iterator}[0]",
+      "targets": [],
+      "value": "nome"
+    }, {
+      "id": "372c3600-ad20-4d44-b598-d06018fd6c03",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${iterator}[1]",
+      "targets": [],
+      "value": "valorprincipal"
+    }, {
+      "id": "972effca-6c72-4b9a-8d0c-ff800381e733",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${iterator}[2]",
+      "targets": [],
+      "value": "meunumero"
+    }, {
+      "id": "6906c055-8964-40a4-9126-8d2c864c4c6c",
+      "comment": "",
+      "command": "open",
+      "target": "/ib-view/home.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b807372-e111-4551-af1e-ee0a060c2810",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1848x1053",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af1c567a-fb3d-44ac-bbfb-80aa72b6cb6c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cobrança",
+      "targets": [
+        ["linkText=Cobrança", "linkText"],
+        ["css=.pipe-cinza:nth-child(8) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Cobrança')]", "xpath:link"],
+        ["xpath=//div[@id='menu-global']/ul/li[8]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/ib-view/url/home.html?id=9')]", "xpath:href"],
+        ["xpath=//li[8]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cobrança')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "edab3107-936f-4e93-93d3-9a7934703837",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cadastrar Títulos",
+      "targets": [
+        ["linkText=Cadastrar Títulos NOVO", "linkText"],
+        ["css=.ultimo:nth-child(2) > a", "css:finder"],
+        ["xpath=//div[@id='principal']/div[2]/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/ib-view/urldispatch.html?oidTrans=104&url=cobranca/gerir/titulo/form.html&migTxt=Cadastrar Títulos')])[2]", "xpath:href"],
+        ["xpath=//div[2]/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cadastrar Títulos NOVO')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "716d8595-1e89-4484-bc44-72b505dbef26",
+      "comment": "",
+      "command": "click",
+      "target": "id=nomeSacado",
+      "targets": [
+        ["id=nomeSacado", "id"],
+        ["name=nomeSacado", "name"],
+        ["css=#nomeSacado", "css:finder"],
+        ["xpath=//input[@id='nomeSacado']", "xpath:attributes"],
+        ["xpath=//li[@id='liRazaoSocial']/input", "xpath:idRelative"],
+        ["xpath=//li[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "61c1ffad-4bcf-476f-9305-da8821fa3613",
+      "comment": "",
+      "command": "type",
+      "target": "id=nomeSacado",
+      "targets": [
+        ["id=nomeSacado", "id"],
+        ["name=nomeSacado", "name"],
+        ["css=#nomeSacado", "css:finder"],
+        ["xpath=//input[@id='nomeSacado']", "xpath:attributes"],
+        ["xpath=//li[@id='liRazaoSocial']/input", "xpath:idRelative"],
+        ["xpath=//li[2]/input", "xpath:position"]
+      ],
+      "value": "${nome}"
+    }, {
+      "id": "f42835f3-74fe-419e-86b5-62c256cd30cd",
+      "comment": "",
+      "command": "click",
+      "target": "css=#liRazaoSocial .icon",
+      "targets": [
+        ["css=#liRazaoSocial .icon", "css:finder"],
+        ["xpath=//li[@id='liRazaoSocial']/a/span", "xpath:idRelative"],
+        ["xpath=//fieldset[2]/ul/li[2]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f32bb905-e6bb-412b-ada6-6e1b3278680f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#liRazaoSocial .icon",
+      "targets": [
+        ["css=#liRazaoSocial .icon", "css:finder"],
+        ["xpath=//li[@id='liRazaoSocial']/a/span", "xpath:idRelative"],
+        ["xpath=//fieldset[2]/ul/li[2]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c080bf71-f493-449b-8fb6-6b3a58a09c57",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=#liRazaoSocial .icon",
+      "targets": [
+        ["css=#liRazaoSocial .icon", "css:finder"],
+        ["xpath=//li[@id='liRazaoSocial']/a/span", "xpath:idRelative"],
+        ["xpath=//fieldset[2]/ul/li[2]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e19d5d4c-fd77-432d-ba8e-5c34f734f78c",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5fc5770-91c5-4be7-9a46-f334f26c04e6",
+      "comment": "",
+      "command": "click",
+      "target": "id=txtSacado",
+      "targets": [
+        ["id=txtSacado", "id"],
+        ["name=nomeSacado", "name"],
+        ["css=#txtSacado", "css:finder"],
+        ["xpath=//input[@id='txtSacado']", "xpath:attributes"],
+        ["xpath=//form[@id='formBean']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "def07d34-77d0-4ae8-9b39-2fe8b592d615",
+      "comment": "",
+      "command": "type",
+      "target": "id=txtSacado",
+      "targets": [
+        ["id=txtSacado", "id"],
+        ["name=nomeSacado", "name"],
+        ["css=#txtSacado", "css:finder"],
+        ["xpath=//input[@id='txtSacado']", "xpath:attributes"],
+        ["xpath=//form[@id='formBean']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${nome}"
+    }, {
+      "id": "58d431b5-832e-46e2-8819-89b14c80a209",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=pesquisar",
+      "targets": [
+        ["linkText=pesquisar", "linkText"],
+        ["css=.adicionar:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'pesquisar')]", "xpath:link"],
+        ["xpath=//form[@id='formBean']/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, \"javascript:document.forms['pesquisaBancosFrm'].submit();\")]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'pesquisar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "73c0f246-4245-4d61-9474-58b217088b91",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(1)",
+      "targets": [
+        ["css=input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='1910E']", "xpath:attributes"],
+        ["xpath=//table[@id='element']/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//td/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "53b97ac0-c49f-49f0-b822-686de0ea0cf2",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [
+        ["relative=parent"]
+      ],
+      "value": ""
+    }, {
+      "id": "a84721b3-3f6e-408e-8e75-859a5adefe5d",
+      "comment": "",
+      "command": "click",
+      "target": "id=seuNumeroI",
+      "targets": [
+        ["id=seuNumeroI", "id"],
+        ["css=#seuNumeroI", "css:finder"],
+        ["xpath=//input[@id='seuNumeroI']", "xpath:attributes"],
+        ["xpath=//ul[@id='infoTitulo']/li[2]/input", "xpath:idRelative"],
+        ["xpath=//ul[2]/li[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "788b54c7-3e64-4fde-ba0c-adb49e15d473",
+      "comment": "",
+      "command": "type",
+      "target": "id=seuNumeroI",
+      "targets": [
+        ["id=seuNumeroI", "id"],
+        ["css=#seuNumeroI", "css:finder"],
+        ["xpath=//input[@id='seuNumeroI']", "xpath:attributes"],
+        ["xpath=//ul[@id='infoTitulo']/li[2]/input", "xpath:idRelative"],
+        ["xpath=//ul[2]/li[2]/input", "xpath:position"]
+      ],
+      "value": "${meunumero}"
+    }, {
+      "id": "3e582cc6-2c57-4d41-a512-2c5008cd2b18",
+      "comment": "",
+      "command": "click",
+      "target": "id=valorPrincipal",
+      "targets": [
+        ["id=valorPrincipal", "id"],
+        ["name=valorPrincipal", "name"],
+        ["css=#valorPrincipal", "css:finder"],
+        ["xpath=//input[@id='valorPrincipal']", "xpath:attributes"],
+        ["xpath=//div[@id='divValorPrincipal']/input", "xpath:idRelative"],
+        ["xpath=//li[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dbd611c4-0d4c-4c92-a6f3-3dc2a121b6b4",
+      "comment": "",
+      "command": "type",
+      "target": "id=valorPrincipal",
+      "targets": [],
+      "value": "${valorprincipal}"
+    }, {
+      "id": "2d6268e0-3774-47d7-811b-247cab64fc62",
+      "comment": "",
+      "command": "click",
+      "target": "css=#jurosEMulta > .tt-padrao",
+      "targets": [
+        ["css=#jurosEMulta > .tt-padrao", "css:finder"],
+        ["xpath=//fieldset[@id='jurosEMulta']/h3", "xpath:idRelative"],
+        ["xpath=//fieldset[5]/h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Juros e Multa')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae40ae12-3b11-470c-bd1b-fbc8bcc53f4f",
+      "comment": "",
+      "command": "click",
+      "target": "id=cobrarJurosMoraPerc",
+      "targets": [
+        ["id=cobrarJurosMoraPerc", "id"],
+        ["name=cobrarJurosMora", "name"],
+        ["css=#cobrarJurosMoraPerc", "css:finder"],
+        ["xpath=//input[@id='cobrarJurosMoraPerc']", "xpath:attributes"],
+        ["xpath=//div[@id='rdCobrarJurosPorcentagem']/input", "xpath:idRelative"],
+        ["xpath=//fieldset[5]/ul/li/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "41a8b616-15c1-474f-8520-5bfdf8c10006",
+      "comment": "",
+      "command": "click",
+      "target": "id=taxaJuros",
+      "targets": [
+        ["id=taxaJuros", "id"],
+        ["name=taxaJuros", "name"],
+        ["css=#taxaJuros", "css:finder"],
+        ["xpath=//input[@id='taxaJuros']", "xpath:attributes"],
+        ["xpath=//fieldset[@id='jurosEMulta']/ul/li[2]/input", "xpath:idRelative"],
+        ["xpath=//fieldset[5]/ul/li[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "13d1b4f6-6d3a-4b68-a153-6e9d12228b40",
+      "comment": "",
+      "command": "type",
+      "target": "id=taxaJuros",
+      "targets": [],
+      "value": "0,03"
+    }, {
+      "id": "04f49abe-d4c0-43fc-b356-a6e2fbd49ec2",
+      "comment": "",
+      "command": "click",
+      "target": "id=valorMulta",
+      "targets": [
+        ["id=valorMulta", "id"],
+        ["name=valorMulta", "name"],
+        ["css=#valorMulta", "css:finder"],
+        ["xpath=//input[@id='valorMulta']", "xpath:attributes"],
+        ["xpath=//fieldset[@id='jurosEMulta']/ul/li[3]/input", "xpath:idRelative"],
+        ["xpath=//fieldset[5]/ul/li[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6d8d517-6b9c-4713-abf8-2ece472d1f64",
+      "comment": "",
+      "command": "type",
+      "target": "id=valorMulta",
+      "targets": [],
+      "value": "2"
+    }, {
+      "id": "a95f26c4-ae8e-40ab-a9d6-314a6e6d6035",
+      "comment": "",
+      "command": "click",
+      "target": "id=submeter",
+      "targets": [
+        ["id=submeter", "id"],
+        ["linkText=avançar", "linkText"],
+        ["name=submeter", "name"],
+        ["css=#submeter", "css:finder"],
+        ["xpath=//a[@id='submeter']", "xpath:attributes"],
+        ["xpath=//div[@id='principal']/div[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0);')])[7]", "xpath:href"],
+        ["xpath=//div/div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'avançar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1554438c-49ef-45b6-b60a-263d1c3d4c0d",
+      "comment": "",
+      "command": "click",
+      "target": "id=submeter",
+      "targets": [
+        ["id=submeter", "id"],
+        ["linkText=confirmar", "linkText"],
+        ["name=submeter", "name"],
+        ["css=#submeter", "css:finder"],
+        ["xpath=//a[contains(text(),'confirmar')]", "xpath:link"],
+        ["xpath=//a[@id='submeter']", "xpath:attributes"],
+        ["xpath=//form[@id='formBean']/div[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:void(0);')])[7]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'confirmar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50abdb77-6fb7-4198-8cd4-6d0176c59c87",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "c696d91b-45bc-4f3d-90fe-17820018b256",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["67592be2-b408-4078-8494-fd4664657a41"]
+  }],
+  "urls": ["https://ibpj.sicredi.com.br/"],
+  "plugins": []
+}
